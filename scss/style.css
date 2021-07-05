@@ -1019,6 +1019,7 @@ body {
   height: 10vw;
   background-color: #252525;
   position: relative;
+  overflow:hidden;
   -webkit-animation: cardShow 1s ease-out forwards;
           animation: cardShow 1s ease-out forwards;
 }
