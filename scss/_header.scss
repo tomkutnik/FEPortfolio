@@ -1,0 +1,186 @@
+
+
+.header {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    left: 0;
+
+    
+
+    &__hero {
+        position: absolute;
+        padding: 1rem;
+        animation: showSectionBottom 2s forwards;
+
+        &-move {
+            animation: hideSectionBottom 2s forwards;
+        }
+
+        @include breakpoint-up(large) {
+           display: block;
+        }
+    }
+
+    &__background {
+        position: relative;
+        animation: showSectionLeft 2s forwards;
+        transform: scale(0.8) translate(-90vw, -10vh);
+
+        @include breakpoint-up(medium) {
+            transform: scale(0.8) translate(-60vw, 0vh);
+        }
+
+        @include breakpoint-up(large) {
+            transform: scale(0.8) translate(25vw, 20vh);
+        }
+
+        &-move {
+            animation: hideSectionLeft 2s forwards;
+        }
+        @include breakpoint-down(medium) {
+            @media (orientation: landscape) {
+                display: none;
+            }
+        }
+    }
+
+    &__reasons {
+        position: absolute;
+        top: 20vh;
+        color: $primFontColor;
+        width: 60vw;
+        height: 100px;
+        opacity: 1;
+        font-size: 1.4rem;
+        font-family: $fontOne;
+        display: block;
+        transform: translate(20vw);
+        text-align: right;
+        &-move {
+            display: none;
+        }
+        @include breakpoint-up(medium) {
+            font-size: 1.6rem;
+        }
+
+        @include breakpoint-up(large) {
+            transform: translate(1vw);
+        }
+
+        &-bigger {
+            transform: scale(2) translate(10vw);
+            transition: 2s;
+            opacity: 0;
+            @include breakpoint-up(large) {
+                transform: scale(2) translate(-10vw);
+                transition: 2s;
+                opacity: 0;
+            }
+        }
+    }
+
+    h1 {
+        color: $primFontColor;
+        font-family: $fontOne;
+    }
+    h4 {
+        color: $secnFontColor;
+        font-family: $fontOne;
+        margin-top: -1.8rem;
+    }
+}
+
+@keyframes hideSectionLeft {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -200vw;
+    }
+}
+
+@keyframes showSectionLeft {
+    0% {
+        left: -200vw;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes hideSectionRight {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -200vw;
+    }
+}
+
+@keyframes showSectionRight {
+    0% {
+        right: -200vw;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes hideSectionTop {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -200vw;
+    }
+}
+
+@keyframes showSectionTop {
+    0% {
+        top: -200vw;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes hideSectionBottom {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -200vw;
+    }
+}
+
+@keyframes showSectionBottom {
+    0% {
+        bottom: -200vw;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes hideSectionOpacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showSectionOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

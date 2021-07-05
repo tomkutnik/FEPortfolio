@@ -1,0 +1,81 @@
+.contact{
+    display: none;
+    position: absolute;
+    margin: auto;
+    min-height: 98vh;
+    width: 98vw;
+    color: $primFontColor;
+    font-family: $fontOne;
+    padding: 2vh 2vw 0 2vw;
+    text-align: center;
+    overflow: hidden;
+    
+
+    @include breakpoint-up(large){
+        left: 20vw;
+        width: 40vw;
+    }
+
+
+    &__header{
+        position: relative;
+        width: 50%;
+        margin-bottom: 4rem;
+        animation: hideSectionTop 2s forwards;
+
+        &-move{
+            animation: showSectionTop 2s forwards;
+        }
+    }
+    &__info{
+        position: relative;
+        display: block;
+        margin: 2rem auto;
+        animation: hideSectionLeft 2s forwards;
+
+        &-move{
+            animation: showSectionLeft 2s forwards;
+        }
+    }
+
+    &__form{            
+        position: relative;
+        animation: hideSectionBottom 2s forwards;
+
+        &-move{
+            animation: showSectionBottom 2s forwards;
+        }
+    }
+
+    &__item{
+        display: block;
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        background: $thirBgColor;
+        color: $primFontColor;
+        border: 1px solid $primFontColor;
+        font-family: $fontOne;
+
+        &:focus{
+            background: $secnBgColor;
+            outline: none;
+        }
+    }
+
+    textarea{
+        margin: auto;
+        height: 10rem;
+    }
+
+    button{
+        width: 8rem;
+        padding: 0.5rem;
+      
+    }
+
+    .honeypot-field{
+        display: none;
+    }
+}

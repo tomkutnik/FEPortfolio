@@ -1,0 +1,274 @@
+.portfolio {
+    display: none;
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    min-height: 99vh;
+    height: auto;
+    padding: 1vh 0;
+    color: $primFontColor;
+    font-family: $fontOne;
+    overflow: hidden;
+
+    @include breakpoint-up(large) {
+        left: 5vw;
+        width: 60vw;
+    }
+
+    &__header {
+        padding: 0 4rem;
+        width: 75%;
+        height: auto;
+        position: relative;
+        animation: hideSectionTop 2s forwards;
+
+        &-move {
+            animation: showSectionTop 2s forwards;
+        }
+        @include breakpoint-up(medium) {
+            left: 25vw;
+            padding: 2rem;
+        }
+
+        @include breakpoint-up(large) {
+            left: 15vw;
+            padding: 0;
+        }
+    }
+
+    &__btnbox {
+        padding: 0rem 0.7rem 0.5rem 0.7rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        animation: hideSectionLeft 2s forwards;
+
+        &-move {
+            animation: showSectionLeft 2s forwards;
+        }
+
+        @include breakpoint-up(medium) {
+            padding: 2rem;
+        }
+    }
+
+    &__btn {
+        background-color: $secnBgColor;
+        color: $primFontColor;
+        font-family: $fontOne;
+        text-decoration: none;
+        border: none;
+        padding: 0.5rem 0.75rem;
+        margin: 0.2rem;
+        cursor: pointer;
+
+        &-off {
+            background-color: $thirBgColor;
+        }
+
+        @include breakpoint-up(medium) {
+            padding: 2rem;
+        }
+    }
+
+    &__flex-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        position: relative;
+        animation: hideSectionBottom 2s forwards;
+
+        &-move {
+            animation: showSectionBottom 2s forwards;
+        }
+    }
+
+    &__item {
+        flex: 0 0 45vw;
+        margin: 5px;
+        height: 10vw;
+        background-color: $secnBgColor;
+        position: relative;
+        animation: cardShow 1s ease-out forwards;
+
+        @include breakpoint-up(medium) {
+            flex: 0 0 45vw;
+            height: 220px;
+        }
+
+        @include breakpoint-up(large) {
+            flex: 0 0 20vw;
+            height: 220px;
+        }
+        &-img {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-www {
+            display: none;
+            @include breakpoint-up(large) {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 65%;
+                height: 84%;
+                background: $thirBgColor;
+                clip-path: polygon(0 0, 74% 0, 52% 100%, 0% 100%);
+                padding: 5% 10%;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 2rem;
+                opacity: 0;
+                transition: 1s;
+
+                &:hover {
+                    opacity: 1;
+                    transition: 1s;
+                }
+            }
+        }
+
+        &-git {
+            display: none;
+            @include breakpoint-up(large) {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 25%;
+                width: 25%;
+                height: 20%;
+                background: #6e5494;
+                clip-path: polygon(100% 0, 50% 0, 25% 100%, 100% 100%);
+                padding: 40% 5% 10% 45%;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 2rem;
+                opacity: 0;
+                transition: 1s;
+
+                &:hover {
+                    opacity: 1;
+                    transition: 1s;
+                }
+            }
+        }
+
+        &-mobileLink {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include breakpoint-up(large) {
+                display: none;
+            }
+        }
+
+        img {
+            width: 40vw;
+            @include breakpoint-up(large) {
+                width: 18vw;
+            }
+        }
+    }
+
+    &__comm-off {
+        animation: cardHide 1s ease-out forwards;
+    }
+
+    &__copy-off {
+        animation: cardHide 1s ease-out forwards;
+    }
+
+    &__idea-off {
+        animation: cardHide 1s ease-out forwards;
+    }
+}
+
+@keyframes cardHide {
+    0% {
+        opacity: 1;
+    }
+    35% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 0;
+        height: 0px;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        z-index: 1;
+        opacity: 0;
+    }
+}
+
+@keyframes cardShow {
+    0% {
+        position: relative;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+
+    35% {
+        width: 45vw;
+        height: 110x;
+        opacity: 1;
+    }
+    100% {
+        width: 45vw;
+        height: 110px;
+        opacity: 1;
+    }
+}
+
+@include breakpoint-up(medium) {
+    @keyframes cardShow {
+        0% {
+            position: relative;
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+        }
+
+        35% {
+            width: 45vw;
+            height: 220px;
+            opacity: 1;
+        }
+        100% {
+            width: 45vw;
+            height: 220px;
+            opacity: 1;
+        }
+    }
+}
+
+@include breakpoint-up(large) {
+    @keyframes cardShow {
+        0% {
+            position: relative;
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+        }
+
+        35% {
+            width: 19vw;
+            height: 220px;
+            opacity: 1;
+        }
+        100% {
+            width: 19vw;
+            height: 220px;
+            opacity: 1;
+        }
+    }
+}

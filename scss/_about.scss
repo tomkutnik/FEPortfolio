@@ -1,0 +1,51 @@
+.about{
+    display: none;
+    position: absolute;
+    margin-top: 10vh;
+    width: 100vw;
+    height: 90vh;
+    color: $primFontColor;
+    font-family: $fontOne;
+    overflow-x: hidden;
+
+
+    &__header{
+        position: relative;
+        display: block;
+        margin: auto;
+        padding: 0 2rem;
+        animation: hideSectionTop 2s forwards;
+
+        &-move{
+            animation: showSectionTop 2s forwards;
+        }
+        @include breakpoint-up(medium){
+            left: 22vw;
+            padding: 2rem;
+        }
+    }
+    &__info{
+        display: block;
+        margin: auto;
+        width: 20rem;
+        padding: 2rem;
+        background: $secnBgColor;
+        height: 80%;
+        overflow-y: auto;
+        position: relative;
+        animation: hideSectionRight 2s forwards;
+
+        &-move{
+            animation: showSectionRight 2s forwards;
+        }
+
+        @include breakpoint-up(medium){
+            height: auto;
+        }
+
+        @include breakpoint-up(large){
+            width: 30rem;
+            transform: translate(-10vw);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 98vw;
+    height: 100vh;
+    background-color: #000000;
+}
+
+
+.pl{
+    display:block;
+}
+
+.en{
+    display:none;
+}
+
+.lang{
+    position: fixed;
+    top: 1vh;
+    left: 1vw;
+    z-index: 10;
+
+
+    &__btn{
+        width: 50px;
+        height: 39px;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding:0;
+        
+
+    }
+
+    img{
+        width: 50px;
+        height: 39px;
+        filter: grayscale(1);
+
+        &:hover{
+            filter: grayscale(0);
+            transition: 1s;
+        }
+    }
+
+
+}

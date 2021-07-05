@@ -1,0 +1,228 @@
+.nav {
+    
+    &__box {
+        z-index: 2;
+        position: fixed;
+        z-index: 70;
+        top: -1rem;
+        left: 76vw;
+        width: 100px;
+        height: 100px;
+        transform: scale(40%);
+        transition: 1s;
+        -webkit-box-shadow: 0px 0px 15px 5px #000000;
+        box-shadow: 0px 0px 15px 5px #000000;
+        background-color: $primBgColor;
+
+        &-close {
+            transform: rotate(-45deg) scale(40%);
+            transition: 1s;
+            
+        }
+
+        @include breakpoint-up(medium) {
+            top: -1rem;
+            left: 89vw;
+        }
+
+        @include breakpoint-up(large) {
+            padding: 0.2rem;
+            left: 95vw;
+            top: 60vh;
+            transform: scale(5);
+            z-index: 2;
+            height: 300px;
+        }
+    }
+    &__logo {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        border: 5px solid $primFontColor;
+        overflow: hidden;
+
+        @include breakpoint-up(large) {
+            border: 5px solid $thirFontColor;
+        }
+
+        &-cycle {
+            border: 5px solid $primFontColor;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            position: relative;
+            top: -5px;
+            left: -5px;
+
+            @include breakpoint-up(large) {
+                border: 5px solid $thirFontColor;
+            }
+        }
+
+        &-square {
+            width: 100px;
+            height: 100px;
+            border: 5px solid $primFontColor;
+            transform: rotate(45deg);
+            position: relative;
+            left: -10px;
+            top: -184px;
+
+            @include breakpoint-up(large) {
+                border: 5px solid $thirFontColor;
+            }
+        }
+
+        &-hline {
+            position: relative;
+            top: -166px;
+            width: 90px;
+            height: 10px;
+            border-top: 5px solid $primFontColor;
+            transition: 1s;
+
+            &-close {
+                border-top: 5px solid red;
+                transition: 1s;
+            }
+
+            @include breakpoint-up(large) {
+                border-top: 5px solid $thirFontColor;
+            }
+        }
+
+        &-vline {
+            position: relative;
+            top: -225px;
+            left: 43px;
+            width: 10px;
+            height: 90px;
+            border-left: 5px solid $primFontColor;
+            transition: 1s;
+            &-close {
+                border-left: 5px solid red;
+                transition: 1s;
+            }
+
+            @include breakpoint-up(large) {
+                border-left: 5px solid $thirFontColor;
+            }
+        }
+
+        &-overlay {
+            position: fixed;
+            top: -1rem;
+            left: 76vw;
+            transform: scale(40%);
+            width: 100px;
+            height: 100px;
+            z-index: 91;
+
+            @include breakpoint-up(medium) {
+                top: -1rem;
+                left: 89vw;
+            }
+            @include breakpoint-up(large) {
+            z-index: -1;
+            }
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        z-index: 60;
+        background: $secnFontColor;
+        top: -20rem;
+        left: 20vw;
+        width: 40rem;
+        height: 29rem;
+        padding: 11rem 0rem 5rem 1rem;
+        -webkit-box-shadow: 0px 0px 15px 5px #000000;
+        box-shadow: 0px 0px 15px 5px #000000;
+        clip-path: polygon(88% 8%, 88% 8%, 88% 8%, 88% 8%);
+        transform: rotate(-45deg);
+        transition: 1s;
+
+        @include breakpoint-up(medium) {
+            top: -70rem;
+            left: 30vw;
+            width: 100rem;
+            height: 60rem;
+            padding: 40rem 0rem 5rem 1rem;
+        }
+
+        @include breakpoint-up(large) {
+            background: $transBgColor;
+            left: 80vw;
+            top: -50vh;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            transform: rotate(0);
+            width: 25rem;
+        }
+
+        &-open {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+            transition: 1s;
+        }
+
+        ul {
+            margin: auto;
+            display: block;
+        }
+
+        li {
+            list-style: none;
+            text-decoration: none;
+ 
+        }
+    }
+    &__item {
+        opacity: 0;
+        font-family: $fontOne;
+        color: $primFontColor;
+        line-height: 5.1rem;
+        font-size: 2rem;
+        cursor: pointer;
+
+        @include breakpoint-up(large) {
+            opacity: 1;
+            padding: 1rem;
+            width: 10rem;
+        }
+
+        @keyframes showItem {
+            0% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+            
+        }
+        @include breakpoint-up(large) {
+            @keyframes showItem {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 1;
+                }
+                
+            }
+        }
+
+        &-hidden {
+            display: none;
+
+            @include breakpoint-up(large) {
+                display: block;
+                color: $secnFontColor;
+            }
+        }
+    }
+}

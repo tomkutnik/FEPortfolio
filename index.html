@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./scss/style.css" rel="stylesheet">
+    <title>Tomasz Kutnik - frontend dev in training</title>
+    <script src="./js/script.js"></script>
+</head>
+
+<body id="#">
+    <div class="lang">
+        <button class="lang__btn pl" onclick="langChange('en')"><img src="src/en.png"></button>
+        <button class="lang__btn en" onclick="langChange('pl')"><img src="src/pl.png"></button>
+    </div>
+    <div class="pageBackground">
+        <div id="navOverlay" class="nav__logo-overlay" onclick="popupMenu()"></div>
+        <div id="navMenu" class="nav__menu">
+            <ul>
+                <li id="navTop" class="nav__item nav__item-hidden" onclick="cardSwap('top')">
+                    <span class="en">top</span><span class="pl">główna</span>
+                </li>
+                <li id="navAbout" class="nav__item" onclick="cardSwap('about')"> <span class="en">about</span><span
+                        class="pl">o mnie</span></li>
+                <li id="navPortfolio" class="nav__item" onclick="cardSwap('portfolio')">portfolio</li>
+                <li id="navContact" class="nav__item" onclick="cardSwap('contact')"> <span
+                        class="en">contact</span><span class="pl">kontakt</span></li>
+            </ul>
+
+        </div>
+        <div id="navBox" class="nav__box">
+
+            <div class="nav__logo">
+                <div class="nav__logo-cycle"></div>
+                <div class="nav__logo-square"></div>
+                <div id="navHLine" class="nav__logo-hline"></div>
+                <div id="navVLine" class="nav__logo-vline"></div>
+
+            </div>
+        </div>
+
+        </nav>
+
+        <header id="header" class="header">
+            <div class=header__background>
+                <img src="./src/ja.jpg">
+            </div>
+            <div id="headerReasons" class="header__reasons"> tomasz kutnik
+            </div>
+            <div class="header__hero">
+                <div class="en">
+                    <h1>unpolished</h1>
+                    <h4>(yet from Poland)</h4>
+                    <h1>frontend dev </h1>
+                    <h1>for you to shape</h1>
+                    <h4>(minus few things i have already learned)</h4>
+                </div>
+                <div class="pl">
+                    <h1>nieoszlifowany</h1>
+                    <h1>frontend deweloper </h1>
+                    <h1>do ukształtowania</h1>
+                    <h4>(minus kilka rzeczy, które już umiem)</h4>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="about" class="about">
+                <div class="about__header">
+                    <p class="pl">kim jestem? <br />
+                        programista/architekt/artysta</p>
+                    <p class="en">who am i? <br />
+                        programist/architekt/artist</p>
+
+                </div>
+
+                <article class="about__info">
+                    <p class="en">
+
+
+                        I focus on development, introducing changes, and not sticking to what you know and what you feel
+                        safe in. Nothing is written in stone, and even something as simple as water can change if given
+                        time. I have always been looking for a way to use previously acquired knowledge for the next
+                        steps in my life. Even though architecture has little to do with programming per se, the
+                        operating principles are still similar. A project that is not the work of one person, but of a
+                        team. A team that must be able to cooperate not only among themselves, but also with people from
+                        outside. Customer needs that need to be properly interpreted bearing in mind the fact that they
+                        are not specialists. Responsibility. Even if your code fails to kill due to the collapse, still
+                        a bug can ruin your life. A unique combination of beauty and technology. After all, it's not a
+                        backend where everything happens away from the viewer's eyesight. As a result, not only the end
+                        result, but also the code should be properly presented.</p>
+
+                    <p class="pl">
+
+
+                        Stawiam na rozwój, wprowadzanie zmian, a nie trzymanie się kurczowo tego co się zna i w czym
+                        człowiek czuje się bezpiecznie. Nic nie jest zapisane w kamieniu, a nawet i to coś tak prostego
+                        jak
+                        woda może zmienić jeśli da się jej czas.
+                        Zawsze szukałem sposobu, by użyć wcześniej zdobytej wiedzy do kolejnych kroków w swoim życiu.
+                        Nawet
+                        jeśli architektura ma niewiele wspólnego z programowaniem per se, to wciąż zasady działania są
+                        podobne.
+                        Projekt, który nie jest dziełem jednej osoby, a zespołu. Zespołu, który musi umieć współpracować
+                        nie
+                        tylko we własnym gronie, ale również z osobami z zewnątrz.
+                        Potrzeby klienta, które trzeba odpowiednio zinterpretować mając na względzie fakt, że nie są oni
+                        specjalistami.
+                        Odpowiedzialność. Nawet jeśli kod nie jest w stanie zabić w wyniku zawalenia, to wciąż błąd może
+                        zrujnować życie.
+                        Niezwykłe połączenie piękna z technologią. W końcu to nie backend gdzie wszystko dzieje się z
+                        dala
+                        od wzroku oglądającego. Przez to nie tylko efekt końcowy, ale również kod powinien odpowiednio
+                        się
+                        prezentować.</p>
+                </article>
+            </section>
+            <section id="portfolio" class="portfolio">
+                <div class="portfolio__header">
+                    <p class="pl">przykładowe prace:</p>
+                    <p class="en">examples of my work:</p>
+                </div>
+                <div class="portfolio__btnbox">
+
+                    <button id="btnAll" class="portfolio__btn" onclick="pageDisplay('all')"><span
+                            class="en">all</span><span class="pl">całość</span></button>
+                    <button id="btnComm" class="portfolio__btn" onclick="pageDisplay('comm')"><span
+                            class="en">commercial</span><span class="pl">komercyjne</span></button>
+                    <button id="btnCopy" class="portfolio__btn" onclick="pageDisplay('copy')"><span
+                            class="en">fit-design</span><span class="pl">szablony</span></button>
+                    <button id="btnIdea" class="portfolio__btn" onclick="pageDisplay('idea')"><span
+                            class="en">idea-play</span><span class="pl">koncepcje</span></button>
+                </div>
+
+                <div class="portfolio__flex-box">
+                    <div class="portfolio__item portfolio__comm">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/quadart.png" />
+                            <a href="https://tomkutnik.github.io/quadart_old/" class="portfolio__item-www"
+                                target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/quadart_old" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/quadart_old/" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__item portfolio__copy">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/dashboard.png" />
+                            <a href="https://tomkutnik.github.io/desigh_dashboard/" class="portfolio__item-www"
+                                target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/desigh_dashboard" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/desigh_dashboard/" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__item portfolio__copy">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/storage.png" />
+                            <a href="https://tomkutnik.github.io/design_FyloStorage/" class="portfolio__item-www"
+                                target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/design_FyloStorage" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/design_FyloStorage/" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+
+                    </div>
+                    <div class="portfolio__item portfolio__idea">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/qna.png" />
+                            <a href="https://tomkutnik.github.io/qna/" class="portfolio__item-www"
+                                target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/qna" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/qna" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item portfolio__copy">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/easybank.png" />
+                            <a href="https://tomkutnik.github.io/design_easybank/" class="portfolio__item-www"
+                                target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/design_easybank" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/design_easybank/" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item portfolio__copy">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/booking.png" />
+                            <a href="https://tomkutnik.github.io/design_simpleBooking/" class="portfolio__item-www"
+                                target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/design_simpleBooking" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/design_simpleBooking/" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item portfolio__copy">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/timenow.png" />
+                            <a href="https://tomkutnik.github.io/design_TimeNow/" class="portfolio__item-www"
+                                target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/design_TimeNow" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/design_TimeNow/" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__item portfolio__comm">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/arpis.png" />
+                            <a href="http://www.arpis-optical.pl/" class="portfolio__item-www" target="_blank">WWW</a>
+                            <a href="http://www.arpis-optical.pl/" class="portfolio__item-mobileLink" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="portfolio__item portfolio__idea">
+                        <div class="portfolio__item-img"><img src="./src/thumbnails/rome.png"/>
+                            <a href="https://tomkutnik.github.io/rome/" class="portfolio__item-www" target="_blank">WWW</a>
+                            <a href="https://github.com/tomkutnik/rome" class="portfolio__item-git" target="_blank">GIT</a>
+                            <a href="https://tomkutnik.github.io/rome/" class="portfolio__item-mobileLink" target="_blank"></a>
+                            </div>
+                    </div>
+                </div>
+
+
+            </section>
+            <section id="contact" class="contact">
+                <p class="contact__header"><span class="en">Contact:</span><span class="pl">Kontakt:</span></p>
+                <p class="contact__info"><span class="en">phone:</span><span class="pl">telefon</span> <br />692940011
+                </p>
+
+                <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+                    action="https://script.google.com/macros/s/AKfycbxHPXffYz4ZVOd4B8KvtMlVfdTZZPMQ54fGVvYwxg/exec">
+
+                    <div class="contact__form">
+                        <label for="name"><span class="en">Name:</span><span class="pl">Imię:</span> </label>
+                        <input id="name" class="contact__item" name="name" required placeholder="John Smith" />
+
+
+                        <label for="email">Email:</label>
+                        <input id="email" class="contact__item" name="email" type="email" value="" required
+                            placeholder="your.name@email.com" />
+                        <label for="message"><span class="en">Message</span><span class="pl">Wiadomość</span> </label>
+                        <textarea id="message" class="contact__item" name="message" required
+                            placeholder="I'm here to hear you!"></textarea>
+
+                        <fieldset class="honeypot-field">
+                            <input id="honeypot" type="text" name="honeypot" value="" />
+                        </fieldset>
+
+                        <button class=" contact__item">
+                            <i class="fa fa-paper-plane"></i><span class="en">Send</span><span
+                                class="pl">Wyślij</span></button>
+                    </div>
+
+                    <div class="thankyou_message" style="display:none;">
+                        <h2><span class="en">Thank you for contact. I will respond as soon as possible!</span><span
+                                class="pl">Dziękuję za wiadomość. Odezwę się tak szybko jak to będzie możliwe!</span>
+                        </h2>
+                    </div>
+
+                </form>
+
+            </section>
+        </main>
+        <div id="intro" class="intro">
+            <div id="introBox" class="intro__box">
+                <div id="introCycle" class="intro__cycle"></div>
+                <div id="introLogo" class="intro__logo">
+                    <div class="intro__logo-cycle"></div>
+                    <div class="intro__logo-square"></div>
+                    <div class="intro__logo-hline"></div>
+                    <div class="intro__logo-vline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" type="text/javascript" src="./js/form-submission-handler.js"></script>
+
+</body>
+
+</html>
