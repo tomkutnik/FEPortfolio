@@ -82,39 +82,43 @@ function popupMenu() {
     const box = document.getElementById("navBox");
     const vLine = document.getElementById("navVLine");
     const hLine = document.getElementById("navHLine");
+    const cv = document.getElementById("navCv")
     let stLink;
     let ndLink;
     let rdLink;
+    let thLink;
     let temp;
 
 
-    function linkSwaper(hide, showOne, showTwo, showThree){
+    function linkSwaper(hide, showOne, showTwo, showThree, showFour){
         temp = document.getElementById(hide);
         stLink = document.getElementById(showOne);
         ndLink = document.getElementById(showTwo);
         rdLink = document.getElementById(showThree);
+        thLink = document.getElementById(showFour)
         temp.classList.add("nav__item-hidden");
         stLink.classList.remove("nav__item-hidden");
         ndLink.classList.remove("nav__item-hidden");
         rdLink.classList.remove("nav__item-hidden");
+        thLink.classList.remove("nav__item-hidden");
     }
 
 
     if (navTop) {
-        linkSwaper("navTop", "navAbout", "navPortfolio", "navContact");
+        linkSwaper("navTop", "navAbout", "navPortfolio", "navContact", "navCv");
     }
 
     if (navAbout) {
-        linkSwaper("navAbout", "navTop", "navPortfolio", "navContact");
+        linkSwaper("navAbout", "navTop", "navPortfolio", "navContact", "navCv");
     }
 
 
     if (navPortfolio) {
-        linkSwaper("navPortfolio","navTop", "navAbout", "navContact");
+        linkSwaper("navPortfolio","navTop", "navAbout", "navContact", "navCv");
     }
 
     if (navContact) {
-        linkSwaper("navContact","navTop", "navAbout", "navPortfolio");
+        linkSwaper("navContact","navTop", "navAbout", "navPortfolio", "navCv");
     }
 
 
@@ -126,6 +130,7 @@ function popupMenu() {
         stLink.style.animation = "showItem 2.5s forwards";
         ndLink.style.animation = "showItem 3s forwards";
         rdLink.style.animation = "showItem 3.5s forwards";
+        thLink.style.animation = "showItem 4s forwards";
         popupCheck = true;
     } else {
         menu.classList.remove("nav__menu-open");
@@ -135,6 +140,7 @@ function popupMenu() {
         stLink.style.animation = "";
         ndLink.style.animation = "";
         rdLink.style.animation = "";
+        thLink.style.animation = "";
         popupCheck = false;
     }
 }
