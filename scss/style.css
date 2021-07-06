@@ -358,7 +358,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  display: block;
+  display: none;
 }
 
 .intro-clean {
@@ -638,7 +638,7 @@ body {
 .nav__logo-hline {
   position: relative;
   top: -166px;
-  width: 90px;
+  width: 100px;
   height: 10px;
   border-top: 5px solid #a8a8a8;
   -webkit-transition: 1s;
@@ -646,7 +646,7 @@ body {
 }
 
 .nav__logo-hline-close {
-  border-top: 5px solid red;
+  border-top: 5px solid #ff0000;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -662,14 +662,14 @@ body {
   top: -225px;
   left: 43px;
   width: 10px;
-  height: 90px;
+  height: 100px;
   border-left: 5px solid #a8a8a8;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 .nav__logo-vline-close {
-  border-left: 5px solid red;
+  border-left: 5px solid #ff0000;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -708,10 +708,10 @@ body {
   position: fixed;
   z-index: 60;
   background: #424242;
-  top: -20rem;
-  left: 20vw;
+  top: -25rem;
+  left: 50vw;
   width: 40rem;
-  height: 29rem;
+  height: 60rem;
   padding: 11rem 0rem 5rem 1rem;
   -webkit-box-shadow: 0px 0px 15px 5px #000000;
   box-shadow: 0px 0px 15px 5px #000000;
@@ -770,6 +770,11 @@ body {
   line-height: 5.1rem;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.nav__item a {
+  color: #ff0000;
+  text-decoration: none;
 }
 
 @media (min-width: 64em) {
@@ -1019,9 +1024,9 @@ body {
   height: 10vw;
   background-color: #252525;
   position: relative;
-  overflow:hidden;
   -webkit-animation: cardShow 1s ease-out forwards;
           animation: cardShow 1s ease-out forwards;
+  overflow: hidden;
 }
 
 @media (min-width: 40em) {
@@ -1313,7 +1318,7 @@ body {
   position: absolute;
   margin: auto;
   min-height: 98vh;
-  width: 98vw;
+  width: 96vw;
   color: #a8a8a8;
   font-family: "Playfair Display", serif;
   padding: 2vh 2vw 0 2vw;

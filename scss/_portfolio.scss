@@ -91,8 +91,8 @@
         height: 10vw;
         background-color: $secnBgColor;
         position: relative;
-        overflow: hidden;
         animation: cardShow 1s ease-out forwards;
+        overflow: hidden;
 
         @include breakpoint-up(medium) {
             flex: 0 0 45vw;
